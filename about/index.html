@@ -12,23 +12,41 @@
     <link rel="icon" href="icon.png" type="image/x-icon">
 </head>
 <body style="overflow: auto">
-    <div>
-        <h1>
-            About
-        </h1>
-    </div>
-    <div class="flex-container" style="height:100%">
-        <div class="flex-item" style="height:100%; width:20px; background-color:limegreen; flex:1">
-            <iframe src="../Components/header.html" frameborder="0"></iframe>
+    <!-- <div class="page-flex-container">
+        <div class="page-flex-item-1">
+            Hello
         </div>
-        <div class="flex-item" style="background-color:darkseagreen; flex: 5">
-            <div class="flex-container" style="height:100%">
-                <div class="flex-item" style="height:100%; background-color:limegreen; flex:1">
-                    <img style="width:400px" src="../Images/401About.jpg">
+        <div class="page-flex-item-2">
+            Goodbye
+        </div>
+    </div> -->
+    <div class="page-flex-container" style="height:100px">
+        <div class="page-flex-item-1" style="flex:1">
+            <header class="nav-flex-container">
+                <a href="../">
+                    <img src="../icon.png" alt="A cup!" class="nav-flex-item-1">
+                </a>
+                <nav class="nav-flex-item-2">
+                    <ul>
+                        <li><a href="../art/">Art</a></li>
+                        <li><a href="../store/">Store</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                        <li><a href="../about/">About</a></li>
+                        <li><a href="../cv/">CV</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+                    <!-- <iframe src="../Components/header.html" frameborder="0"></iframe> -->
+        <div class="page-flex-item-2">
+            <div class="flex-container" style=" place-content: center;">
+                <div class="flex-item" style="flex:1; margin: 20px">
+                    <img style="width:100%" src="../Images/401About.jpg">
                 </div>
-                <div class="flex-item" style="height:100%; background-color:limegreen; flex:1">
+                <div class="flex-item" style="flex:1; margin: 20px ">
                     <div>
-                        <p style="width:500px; text-align: center">
+                        <p style="width:100%px; text-align: center">
                             The arduous processes in my practice exist as exercises in meditation and worship. 
                             I am worshipping through the action of craft similar to monks who have produced 
                             sand mandalas and stained glass windows in the proclamation of their faith. 
@@ -46,6 +64,7 @@
                         </p>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
