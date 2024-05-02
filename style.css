@@ -71,12 +71,27 @@ body {
     height: calc(100vh - 200px);
     width: calc(100vw - 200px);
     /* overflow: hidden; */
-    
+    position: relative;
 }
 
 .homepage-bubble {
-    background-color: beige;
+    position: absolute;
+    /* background-color: beige; */
     text-align: center;
+    /* padding: 80px; */
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 70%); */
+}
+
+.homepage-bubble h1 {
+    font-size: 50px;
+    color: white
+}
+
+.homepage-bubble p {
+    color: white;
 }
 
 .header {
@@ -124,4 +139,10 @@ nav ul li a {
     margin: 0px;
     padding: 0px;
 
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
 }
