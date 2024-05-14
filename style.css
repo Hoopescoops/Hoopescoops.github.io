@@ -4,10 +4,11 @@ html {
 
     height: 100vh;
     width: 100%;
-    background-color: aliceblue;
+    background-color: white;
     /* background-color: cornflowerblue; */
     color: black;
     overflow: hidden;
+    overflow-x: hidden;
 
     touch-action: manipulation; /* Improve responsiveness on touch devices */
     -ms-touch-action: manipulation; /* For older versions of IE */
@@ -57,7 +58,7 @@ body {
     position: -webkit-sticky;
     /* bottom: 1px; */
     /* border: solid; */
-    top: 25px;
+    /* top: 25px; */
 }
 
 .nav-flex-item-1 { /* top/left part of header */
@@ -82,32 +83,26 @@ body {
     padding: 20px;
     text-align: center;
     justify-content: space-between;
-    /* height: 500px; */
 }
 
 .nav-flex-item-2 a { /* single element of nav menu in header */
     font-size: 100%;
+    display: block;
     /* margin: 10px; */
-    /* margin-top: 20px; */
+    margin-top: 10px;
 }
 
 .page-flex-container {
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    /* display: flex;
-    place-items: center; */
-    /* justify-content: space-around; */
+    height: calc(100% - 200px);
+    margin: 20px;
 }
 
 .page-flex-item-1 {
     padding: 0px;
-    margin: 20px;
-    /* width:100%; */
-    width: 100%;
+    /* margin: 0px; */
+    /* width: 100%; */
     flex: 1;
 }
 
@@ -116,7 +111,7 @@ body {
     /* width: calc(100%-100px); */
     padding: 0px;
     margin: 0px;
-    height: 100vh;
+    height: calc(100vh - 46px);
     /* border: solid; */
     flex: 9;
     
@@ -162,11 +157,15 @@ body {
     .nav-flex-container { /* header */
         flex-direction: row;
         height: 100px;
-        width: calc(100% - 40px);
+        width: 100%;
+        /* padding: 0px;
+        margin: 0px; */
     }
     
     .nav-flex-item-1 { /* top/left part of header */
-        width: 100%;
+        /* width: 100%; */
+
+        /* width: 100px; */
         /* height: 100%; */
         padding: 0px;
         margin: 0px;
@@ -180,96 +179,67 @@ body {
     }
     
     .nav-flex-item-2 { /* bottom/right part of header */
-        /* width: 200%; */
+        
+        display: flex;
+        width: 100%;
+        min-width: 0px;
+        height: 100%;
         padding: 0px;
+        padding-left: 4px;
+        padding-right: 4px;
         margin: 0px;
         box-sizing: border-box;
-        /* border: solid black; */
-        /* color: purple; */
-        /* border: solid; */
-        margin-bottom: 5px;
-        list-style: none;
-        /* padding: 20px; */
-        /* text-align: center; */
-        align-content: center;
-        place-content: center;
+        /* list-style: none; */
+        justify-content: center;
+        align-items: center;
 
-        justify-content: space-evenly;
+        /* overflow-wrap: break-word; */
+
+        flex-wrap: wrap;
+
+        /* padding-bottom: 10px; */
     }
     
     .nav-flex-item-2 a { /* single element of nav menu in header */
         font-size: 100%;
-
-        /* margin: 10px; */
-        /* margin-top: 20px; */
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        padding-left: 3px;
+        padding-right: 3px;
+        /* background-color:red; */
     }
     
     .page-flex-container {
         display: flex;
-        flex-direction: row;
-        height: 100%;
+        flex-direction: column;
+        /* height: 100vh; */
+        width: 50%;
         padding: 0px;
     }
     
     .page-flex-item-1 {
         padding: 0px;
-        margin: 20px;
-        width: 100%;
+        width: calc(100vw - 40px); 
+        height: 100%;
+        /* margin: 20px; */
+        /* width: 100px; */
+        /* background-color: red; */
+        overflow-wrap: break-word;
+
     }
     
     .page-flex-item-2 {
         padding: 0px;
         margin: 0px;
-    }
-
-    .nav-flex-item-1 {
-        width: 100px;
-    }
-    
-    .nav-flex-item-2 {
-        width: calc(100% - 20px);
-        height: 100px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-    }
-
-    .nav-flex-item-2 a {
-        flex: 1;
-        padding: 3px;
-    }
-    
-    .page-flex-container {
-        flex-direction: column;
-        /* width: 100%; */
-    }
-
-    .page-flex-item-1 {
-        width: 100vw;
-        height: 100vh;
-    } 
-    
-    .page-flex-item-2 {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .content-flex-container {
-        flex-direction: column;
-        /* width: 100%; */
-    }
-
-    .content-flex-item-1 {
-        /* width: 100%; */
-    } 
-
-    .content-flex-item-1 img {
-        /* width: calc(100% - 40px); */
-        /* width: 100%; */
-    }
-    
-    .content-flex-item-2 {
-        text-align: center;
+        margin-right: 0px;
+        width: calc(100vw - 40px);
+        height: calc(100vh - 145px);
+        /* height: 100vh; */
+        /* background-color: blue; */
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
     }
 }
 
@@ -289,9 +259,9 @@ body {
 .homepage-body {
     margin: 0px;
     /* padding: 100px; */
-    background-image: url('Images/The\ Magpie\ Show/The\ Magpie\ Reception-2.jpg');
+    background-image: url('Images/Homepage.png');
     background-size: cover;
-    background-position: right 20% top 30%;
+    background-position: right 10% top 30%;
     /* background-position-x: ; */
 
     /* height: calc(100vh - 200px);
